@@ -1,5 +1,4 @@
 # Text Analytics Individual Assignment - Salary Prediction
-# Ethan Pirso
 
 ## Overview
 This project aims to build and test classification models to predict high and low salaries based on the text contained in job descriptions. The dataset used for this assignment is the "Job Salary Prediction" dataset from Kaggle, which can be found [here](http://www.kaggle.com/c/job-salary-prediction).
