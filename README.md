@@ -34,14 +34,11 @@ The project outputs the accuracy of the Naïve Bayes classifier, a confusion mat
 
 ## Questions
 
-# 1. Build a classification model with text (full job description) as the predictor. What is the accuracy of
-your model? Show the confusion matrix. Also show the top 10 words (excluding stopwords) that are
-most indicative of (i) high salary, and (ii) low salary.
+1. Build a classification model with text (full job description) as the predictor. What is the accuracy of your model? Show the confusion matrix. Also show the top 10 words (excluding stopwords) that are most indicative of (i) high salary, and (ii) low salary.
 
 The accuracy of the Naïve Bayes classifier is 0.796. The confusion matrix and the plots of top 10 indicative words are contained in the outputs folder. The top 10 words indicative of high salary are: 'client', 'within', 'development', 'work', 'skills', 'management', 'role', 'team', 'business', 'experience'. The top 10 words indicative of low salary are: 'manager', 'business', 'within', 'sales', 'skills', 'working', 'team', 'role', 'work', 'experience'.
 
-# 2. If you wanted to increase the accuracy of the model above, how can you accomplish this using the
-dataset you have?
+# 2. If you wanted to increase the accuracy of the model above, how can you accomplish this using the dataset you have?
 
 To increase the accuracy of the model, we initially expanded the scope of hyperparameter tuning by incorporating a more extensive grid search that evaluated both `TfidfVectorizer` and `CountVectorizer` for text feature extraction, alongside a broader range of parameter values for `max_df`, `ngram_range`, and the `alpha` parameter of the `MultinomialNB` classifier. This approach allowed for a comprehensive search over a combination of feature extraction techniques (including both unigrams and bigrams) and classifier configurations, with the aim of identifying the optimal set of parameters that would yield the highest accuracy. The grid search evaluated a total of 96 different configurations across 5 folds, resulting in 480 fits. The final improved model selected from this process utilized a `TfidfVectorizer` with `max_df=0.5`, and a `MultinomialNB` classifier with an `alpha` of 0.01.
 
